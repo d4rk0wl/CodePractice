@@ -1,20 +1,67 @@
-structure = {
-    'Pota': [
-        "{callsign} ur {signal} {signal} {state} bk",
-        'p2p',
-        'CALLSIGN'
-    ],
-    'Sota': [
-        'CALLSIGN GREET ur SIG SIG STATE STATE bk',
-        's2s'
-    ]
-}
+first_greeting = [
+    'ga',
+    'gm',
+    'ge',
+    'ga om',
+    'gm om',
+    'ge om',
+    'gm {name}',
+    'ga {name}',
+    'ge {name}',
+    'de {callsign}',
+    'de {randsign}',
+    'gm {callsign} de {randsign}',
+    'ga {callsign} de {randsign}',
+    'ge {callsign} de {randsign}'
+]
 
-test = {
-    'Pota': [
-        "{callsign} ur {signal} {signal} {state} bk",
-    ]
-}
+second_greeting = [
+    'bk r r tu',
+    'bk r de {randsign}',
+    'bk r de {callsign}',
+    'r r r tu',
+    'tu',
+    'bk tu',
+    'bk r r'
+]
+
+ending_templates = [
+    '{br} e e',
+    '{callsign} de {randsign} {br} e s 88 gl e e',
+    '{br} e s gl e e',
+    '{br} e s gl de {randsign} e e',
+    'e e',
+    'gl e s {br} de {randsign} e e',
+    'gl e s {br} e e',
+    'gl {name} {br} de {randsign} e e',
+    '{br} {name} de {randsign} e e',
+    '{br} {name} e e',
+    '{br}'
+]
+
+ota_phrases = [
+    'Cq cq pota de {randsign}',
+    'Cq cq sota de {randsign}',
+    'Cq cq pota de {randsign} k',
+    'Cq cq sota de {randsign} k',
+    '{randsign} {greeting1} ur {sig} {sig} {state} {ota} bk',
+    '{callsign} {greeting1} ur {sig} {sig} {state} {ota} bk',
+    '{randsign} {greeting1} ur {sig} {sig} {ota} bk',
+    '{callsign} {greeting1} ur {sig} {sig} {ota} bk',
+    '{greeting2} {sig} {sig} {state} {state} {ota} bk',
+    '{greeting2} {sig} {sig} {state} {state} {ota} {ending} bk',
+    '{greeting2} {state} {state} {ota} bk',
+    '{greeting2} {state} {state} {ota} {ending} bk',
+    '{greeting2} {ending}',
+    '{ending}'
+]
+
+ragchew_phrases = [
+    'cq cq de {randsign} {randsign} k',
+    'cq cq de {callsign} {callsign} k',
+    '{callsign} de {randsign} ga rst {sig} op {randname} rig 100w ant dipole qth {state} bk',
+    '{callsign} de {randsign} gm rst {sig} op {randname} rig 5w ant vert qth {state} bk',
+]
 
 states = [
     'al',
@@ -84,4 +131,40 @@ callsign_format = [
     'PPNSS',
     'PPNSSS',
     'PPNSSSS'
+]
+
+parks = [
+    'US3791',
+    'US4567',
+    'US4556',
+    'US4581',
+    'US4572',
+    'US4239',
+    'US9935',
+    'US1126',
+    'US1181',
+    'US0063',
+    'W6/CT225',
+    'W6/CT226',
+    'W7I/IC172',
+    'W70/CE188',
+    'W0C/FR063',
+    'W0C/FR194',
+    'WOI/IA001',
+    'W7M/FS149',
+    'W7M/FS089',
+    'W0C/PR082'
+]
+
+names = [
+    'steve',
+    'mike',
+    'paul',
+    'julie',
+    'laura',
+    'jenny',
+    'will',
+    'casey',
+    'katie',
+    'stacey'
 ]
