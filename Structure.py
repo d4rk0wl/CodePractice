@@ -22,7 +22,9 @@ second_greeting = [
     'r r r tu',
     'tu',
     'bk tu',
-    'bk r r'
+    'bk r r',
+    'bk r qsl tu',
+    'qsl qsl tu'
 ]
 
 ending_templates = [
@@ -51,7 +53,7 @@ ota_phrases = [
     '{greeting2} {sig} {sig} {state} {state} {ota} bk',
     '{greeting2} {sig} {sig} {state} {state} {ota} {ending} bk',
     '{greeting2} {state} {state} {ota} bk',
-    '{greeting2} {state} {state} {ota} {ending} bk',
+    '{greeting2} {state} {state} {ota} {ending}',
     '{greeting2} {ending}',
     '{ending}'
 ]
@@ -61,6 +63,18 @@ ragchew_phrases = [
     'cq cq de {callsign} {callsign} k',
     '{callsign} de {randsign} ga rst {sig} op {randname} rig 100w ant dipole qth {state} bk',
     '{callsign} de {randsign} gm rst {sig} op {randname} rig 5w ant vert qth {state} bk',
+    '{callsign} de {randsign} ge rst {sig} rig yaesu 100w ant efhw qth {state} bk',
+    'bk {callsign} de {randsign} thx {randname} qth {state} rst {sig} {ending}',
+    '{callsign} de {randsign} qsl thx rig 5w qrp ant efhw {ending}',
+    'bk qsl qsl thx {callsign} de {randsign} qth {state}',
+    '{callsign} de {randsign} thx fer call name is {randname} bt qth {state} {state} ur {sig} hw copy?',
+    '{callsign} de {randsign} thx {randname} for nice report bt rig is 100w ant is dipole wx sunny hw copy?',
+    '{callsign} de {randsign} qsl wx is cloudy hw abt you?',
+    'bk thx fer call {callsign} name is {randname} qth is {state} ur rst {sig}',
+    '{callsign} de {randsign} thx fer qso {ending}',
+    'sri {name} no copy no copy qrm qrm {ending}',
+    'thx {name} good sig wx is sunny '
+    '{ending}'
 ]
 
 states = [

@@ -18,6 +18,21 @@ def callsign_generator():
     return callsign
 
 
+def generate_ending(ending_callsign, ending_randsign, name):
+    def generate_7x():
+        if randint(0, 1) == 0:
+            return '72'
+        else:
+            return '73'
+
+    return ending_templates[randint(0, len(ending_templates) - 1)].format(
+        callsign=ending_callsign,
+        br=generate_7x(),
+        randsign=ending_randsign,
+        name=name
+    )
+
+
 def ragchew_generator(params):
     phrase_list = []
 
@@ -41,7 +56,9 @@ def ragchew_generator(params):
             randsign=randsign,
             state=states[randint(0, len(states) - 1)],
             sig=f"{randint(0, 9)}{randint(0, 9)}{randint(0, 9)}",
-            randname=names[randint(0, len(names) - 1)]
+            randname=names[randint(0, len(names) - 1)],
+            name=names[randint(0, len(names) - 1)],
+            ending=generate_ending(callsign, randsign, params['name'])
         ).upper())
 
     return phrase_list
@@ -63,21 +80,7 @@ def ota_phrase_generator(params):
         if randint(0, 1) == 0:
             return f"at {parks[randint(0, len(parks) - 1)]}"
         else:
-            return
-
-    def generate_ending(ending_callsign, ending_randsign, name):
-        def generate_7x():
-            if randint(0, 1) == 0:
-                return '72'
-            else:
-                return '73'
-
-        return ending_templates[randint(0, len(ending_templates) - 1)].format(
-            callsign=ending_callsign,
-            br=generate_7x(),
-            randsign=ending_randsign,
-            name=name
-        )
+            return ""
 
     if params['mode'] == "All":
         array_length = 50
