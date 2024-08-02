@@ -8,6 +8,7 @@ class MainInterface:
         self.window = Tk()
         self.window.title("CW Phrase Generator")
         self.window.config(padx=20, pady=10, bg='#f0f0f0')
+        self.window.iconbitmap("./icons/app.ico")
 
         self.callsign = StringVar(self.window, "")
         self.name = StringVar(self.window, "")
